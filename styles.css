@@ -4,78 +4,40 @@
     box-sizing: border-box;
 }
 
-div.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    background-color: black;
-}
-
-div.container div.ball {
+div.child {
     width: 100px;
     height: 100px;
-    background-color: black;
-    /* transition-duration: 0.3s;
-    transition-timing-function: cubic-bezier(1, 0.02, 0, -1.21); */
-    animation-name: bounce;
-    margin:10px
+    background-color: aqua;
 }
 
-div.container:hover div.ball{
-    /* transform: rotateZ(120deg);
-    transform: scale(2);
-    transform: translateX(400px);
-    background-color: red;
-    cursor: pointer;
-     border-radius: 50%; */
-     animation-duration: 2.5s;
-     animation-name: stylish-rotate;
-     animation-fill-mode: forwards;
-     animation-iteration-count: infinite;
-     animation-delay: 0.3s;
-    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-}
-@keyframes bounce {
-    0% {}
-    25% {
-        transform: translateY(100px);
-    }
-    50% {
-        transform: translateY(0px);
-    }
-    75% {
-        transform: translateY(-100px);
-    }
-    100% {}
+div.child:hover {
+    background-color: blue;
 }
 
-@keyframes stylish-rotate {
-    0% {
-        background-color: violet;
-    }
-    14% {
-        background-color: indigo;
-    }
-    28% {
-        background-color: blue;
-    }
-    42% {
-        background-color: green;
-    }
-    56% {
-        background-color: yellow;
-    }
-    70% {
-        background-color: orange;
-    }
-    84% {
-        background-color: red;
-    }
-    100% {
-        transform: rotate(360deg);
-        background-color: white;
-        border-radius: 10px;
-    }
+input:focus {
+    background-color: orange !important;
+}
+
+div::selection {
+    color: brown;
+}
+
+li {
+    list-style: none;
+    font-size: 4rem;
+    position: relative;
+    width: 200px;
+    display: inline-block;
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    right: 10px;
+    top: 30px;
 }
 
